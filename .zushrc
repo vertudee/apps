@@ -1,0 +1,25 @@
+# Configurações do Zush (Z-Shell)
+
+# Identidade visual do prompt (Zoot)
+PS1='\[\e[1;35m\]zoot@zeland\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ '
+
+# 3. Dicionário de Comandos Z (Aliases)
+alias zclear='clear'
+alias zc='clear'
+alias zexit='exit'
+alias zwin='am start --user 0 -n com.termux/com.termux.TermuxActivity' # Abre nova janela no Termux
+alias zush='source ~/.zushrc'
+
+# 4. Lógica de Cores dos Arquivos
+# Roxo (Ativo/Sistema): .z, .zsh
+# Amarelo (Inativo/Fora do padrão): Arquivos genéricos
+# Branco (Incompleto): .tmp, .draft
+export LS_COLORS="di=1;35:fi=0:*.z=1;35:*.zsh=1;35:*.tmp=0:*.draft=0:*=1;33"
+alias ls='ls --color=auto'
+
+# 5. Regras de Variáveis (Lembrete visual ao iniciar)
+echo "--------------------------------------"
+echo " Ambiente Z-Lang Ativo: Bem-vindo ao Zoot"
+echo " Variáveis: /@ VAR @/ ou \@ var @\"
+echo " Hexadecimais: Use # (ex: #FFFFFF)"
+echo "--------------------------------------"

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Tradutor Z - Nível de Complexidade 1
+ALVO=$1
+
+if [ -z "$ALVO" ]; then
+    echo "ERRO: Informe o arquivo de lógica (ex: ./u projeto.z)"
+    exit 1
+fi
+
+if [ ! -f "$ALVO" ]; then
+    echo "ERRO: O arquivo [$ALVO] não existe no plano atual."
+    exit 1
+fi
+
+echo "--- RECONSTRUINDO GEOMETRIA: $ALVO ---"
+
+# Aqui a mágica do Tradutor acontece:
+# Ele cria uma versão temporária traduzindo seus blocos / /
+sed 's/\/ main \//.global _start\n_start:/g' "$ALVO" > geometria_pura.s
+
+# Compilação minimalista
+as -o temp.o geometria_pura.s
+ld -s -o binario_z temp.o
+
+echo "=== BINÁRIO SOBERANO GERADO ==="
+

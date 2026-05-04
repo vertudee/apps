@@ -1,0 +1,10 @@
+
+### Como aplicar agora:
+1.  Abra o seu terminal no **Termux**.
+2.  Entre na pasta do projeto: `cd apps`.
+3.  Crie ou edite o arquivo: `nano README.md`.
+4.  Cole o conteúdo acima (no Android/Termux, geralmente é só segurar a tela e clicar em **Paste**).
+5.  Salve com `Ctrl + O`, dê `Enter` e saia com `Ctrl + X`.
+6.  Dê o `git add README.md`, `git commit -m "Add documentation"` e `git push`.
+
+Dessa forma, qualquer pessoa que entrar no seu GitHub vai entender imediatamente que se trata de uma arquitetura nova e profissional! Quer que eu mude algum termo técnico antes de você postar?

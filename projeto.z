@@ -1,0 +1,6 @@
+/* Bloco de Inicialização Z-777 */
+/ main /
+{
+    // A lógica de simetria entra aqui
+    return 0
+}

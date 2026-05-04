@@ -1,0 +1,8 @@
+# Lógica simplificada do que o tradutor faria:
+# 1. Lê o bloco Z2
+# 2. Se encontrar ( / ), trata como Fluxo de Parênteses (Lógica de Pilha)
+# 3. Se encontrar { // }, trata como Bloco de Memória (Escopo)
+# 4. Se encontrar [ \ ], trata como Vetor de Direção (Registrador)
+# 5. Se os blocos estiverem lado a lado, ele gera execução PARALELA (Threads)
+
+
