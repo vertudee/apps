@@ -1,0 +1,62 @@
+============================================================
+Z-LANG: THE DIMENSIONAL SPREADSHEET ARCHITECTURE (Z-777)
+============================================================
+
+1. PHILOSOPHY: THE ETHICS OF AMBIGUITY
+Z-Lang is a low-level language designed for the ZASM environment 
+on Linux/Android (Termux). It treats programming as a geometric 
+activity, organizing data like a multidimensional spreadsheet 
+to achieve absolute "Weight Nullification" (Zero Overhead).
+
+2. CORE DECLARATORS (THE HUMAN TABLE)
+Z-Lang uses universal symbols to define memory allocation:
+- €int    : 32-bit Integer (Mathematical/Logical cells)
+- £char   : 8-bit Character (Single byte units)
+- ¥float  : Floating Point (Geometric precision)
+- ₩string : Memory Arrays (Textual/Data streams)
+
+3. THE COORDINATE SYSTEM (EXCEL LOGIC)
+Variables are not just names; they are coordinates in a grid 
+defined by Intercalated Underlines:
+- Syntax: _[Symbol]_[Identifier]_
+- Example: _A_venda_ (Column A, ID "venda")
+- Case Sensitivity: _a_venda_ (Dynamic/RAM) is DIFFERENT from 
+  _A_venda_ (Static/RO-Data).
+
+4. SYMMETRY AND ENCAPSULATION
+Data content is wrapped in symmetrical "cocoons" using the 
+@ symbol. This prevents collision with mathematical operators.
+- Format: @[ID] [Content] [ID]@
+- Example: €int_A_1_price_ @p 500 p@
+
+5. THE ESCAPE PROTOCOL
+To ensure that all symbols from the "Human Table" can be used 
+inside the data without breaking the compiler:
+- Use the backslash (\) to escape the @ symbol.
+- Rule: \@ = Literal "@" character.
+
+6. DIMENSIONAL FLOW (IF/LOGIC)
+Logic in Z-Lang is not linear, but dimensional. 
+- Scripts can verify data across different "spreadsheet tabs" 
+  (Dimensions).
+- If an error is detected in one dimension, the system can 
+  nullify that specific coordinate weight and shift execution 
+  to a parallel geometric plane.
+
+7. COMPILATION (Z TO ZASM)
+Z-Lang is a single-pass language. It translates high-level 
+geometric syntax directly into raw Assembly (ASM) instructions.
+- Bypasses C/Clang intermediaries.
+- Direct register manipulation based on symbol types.
+- Optimized for Linux Kernel execution.
+
+============================================================
+CREATED BY: Vertudee (Z-Block Project)
+ENVIRONMENT: Linux/Termux (Mobile Development)
+============================================================
+
+// Esta vai para a RAM (.data)
+€int_a_counter_ @ 1 @
+
+// Esta vai para a memória protegida (.rodata) - Geometria Superior
+€int_A_limit_ @ 777 @

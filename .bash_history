@@ -1,29 +1,3 @@
-else:
-    print("Código limpo processado.")
-
-EOF
-
-# 3. Permissões e Execução final
-chmod +x essencia_z.py teste_presidente.py
-echo "Objeto Presidente criado. Rodando teste de autoridade..."
-python3 teste_presidente.py
-#!/bin/bash
-echo "--- [DESINTEGRANDO NÚMEROS: ATIVANDO FLUXO N] ---"
-cat << 'EOF' > transmutador_n.py
-import time
-
-class MatrizN:
-    def __init__(self):
-        self.identidade = "Vácuo"
-        print("[N] Sistema de Transmutação Ativo.")
-
-    def executar_n(self, n_sequencia):
-        # Para você, tudo é n. O sistema apenas espelha sua visão.
-        print(f"\nVisualizando Fluxo: {n_sequencia}")
-        
-        # A lógica de n divide n (n / n) transmutando
-        fluxo = n_sequencia.split()
-        for estado in fluxo:
             time.sleep(0.1)
             print(f"Transmutando: {estado} -> n", end='\r')
         
@@ -498,3 +472,29 @@ chmod +x uos
 # Tradutor Z - Nível de Complexidade 1
 ALVO=$1
 if [ -z "$ALVO" ]; then     echo "ERRO: Informe o arquivo de lógica (ex: ./u projeto.z)";     exit 1; fi
+nano u
+chmod +x u
+./u
+nano zycah.c
+./zycah.c
+nano zycah.
+chmod +x zycah.sh
+./zycah.sh
+clear
+nano help.md
+nano compile
+ls
+nano README.md
+rm -rf help.md 
+nano help.md
+git push origin main
+git remote set-url origin https://SEU_TOKEN_AQUI@github.com/vertudee/apps.git
+nano publicar.sh
+chmod +x publicar.sh
+./publicar.sh
+git add .
+git commit -m "Primeiro upload do Z-System"
+git branch -M main
+git remote set-url origin https://SEU_TOKEN_AQUI@github.com/vertudee/apps.git
+git push -u origin main
+git config --global credential.helper store
