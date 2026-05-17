@@ -1,0 +1,55 @@
+==================================================
+📊 RELATÓRIO DE VALIDAÇÃO GEOMÉTRICA - QUANTUM-Z
+==================================================
+Data da Execução: 2026-05-17 08:52:52
+Módulo Analisado: teste_quantum_z_portas.py
+Status da Malha: Sincronizado via Termux
+--------------------------------------------------
+
+📝 DESCRIÇÃO TEÓRICA DO PROJETO:
+Este relatório documenta o comportamento estatístico do algoritmo 'teste_quantum_z_portas.py' 
+sob condições de ruído quântico simulado. O objetivo do teste é demonstrar 
+a eficiência da arquitetura Z na mitigação e anulação aleatória de erros 
+de superposição e decoerência de fase.
+
+--------------------------------------------------
+🔬 RESULTADOS DOS TESTES DE RUÍDO (SAÍDA DA ENGINE):
+--------------------------------------------------
+=== [ZARANYX_OS] INICIANDO DIAGNÓSTICO DE PORTAS v9.0 ===
+-> Testando o impacto da escala do caderno nas portas fundamentais...
+
+============================================================
+[FASE 1]: ANALISANDO PORTA X (NOT)
+============================================================
+Caderno [-9] -> Pós-Porta X -> |0>: 979  | |1>: 21  
+Caderno [ 0] -> Pós-Porta X -> |0>: 0    | |1>: 1000
+Caderno [10] -> Pós-Porta X -> |0>: 1000 | |1>: 0   
+
+============================================================
+[FASE 2]: ANALISANDO PORTA H (HADAMARD)
+============================================================
+Caderno [-9] -> Pós-Porta H -> |0>: 357  | |1>: 643 
+Caderno [ 0] -> Pós-Porta H -> |0>: 463  | |1>: 537 
+Caderno [10] -> Pós-Porta H -> |0>: 528  | |1>: 472 
+
+============================================================
+[FASE 3]: ANALISANDO PORTA Z (PHASE FLIP)
+============================================================
+Caderno [-9] -> Pós-Porta Z -> |0>: 27   | |1>: 973 
+Caderno [ 0] -> Pós-Porta Z -> |0>: 1000 | |1>: 0   
+Caderno [10] -> Pós-Porta Z -> |0>: 0    | |1>: 1000
+
+============================================================
+[FASE 4]: ANALISANDO PORTA CNOT (2 QUBITS)
+============================================================
+Caderno [-9] -> Pós-CNOT   -> [00]: 29   | [11]: 971 
+Caderno [ 0] -> Pós-CNOT   -> [00]: 1000 | [11]: 0   
+Caderno [10] -> Pós-CNOT   -> [00]: 0    | [11]: 1000
+
+[Z-CONTEXT] Diagnóstico completo de operadores finalizado.
+[STATUS]: Motores validados com a simetria do caderno.
+
+
+--------------------------------------------------
+Fim do Relatório - Propriedade Intelectual da Conta 'vertudee'
+==================================================
