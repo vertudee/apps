@@ -1,0 +1,26 @@
+total 98
+drwx------. 2 u0_a396 u0_a396 3452 2026-05-23 08:38 tempo_de_execucao
+-rw-------. 1 u0_a396 u0_a396 2545 2026-05-18 11:20 janela4.py
+-rw-------. 1 u0_a396 u0_a396 2657 2026-05-18 11:14 janela3.py
+-rw-------. 1 u0_a396 u0_a396 2249 2026-05-18 11:12 janela2.py
+-rw-------. 1 u0_a396 u0_a396 2245 2026-05-18 11:09 janela.py
+-rw-------. 1 u0_a396 u0_a396  776 2026-05-18 11:08 janela-deslizante.py
+-rw-------. 1 u0_a396 u0_a396 3133 2026-05-17 18:48 Z-Elastic.py
+-rw-------. 1 u0_a396 u0_a396 2586 2026-05-17 18:39 vaco.py
+-rw-------. 1 u0_a396 u0_a396 2746 2026-05-17 18:36 cimetria2.py
+-rw-------. 1 u0_a396 u0_a396 2671 2026-05-17 18:32 cimetria.py
+drwx------. 3 u0_a396 u0_a396 3452 2026-05-17 17:48 holy-grail-security
+drwx------. 5 u0_a396 u0_a396 3452 2026-05-17 12:58 zblock-core
+-rw-------. 1 u0_a396 u0_a396    0 2026-05-17 12:21 interpretador_teste.z
+-rw-------. 1 u0_a396 u0_a396 4439 2026-05-17 12:18 build_zblock.py
+drwx------. 2 u0_a396 u0_a396 3452 2026-05-17 11:40 dia_arquivo.z
+-rw-------. 1 u0_a396 u0_a396 2071 2026-05-17 11:37 gerenciador_z2.py
+-rw-------. 1 u0_a396 u0_a396   53 2026-05-17 11:35 dia_arquivo.z.txt
+-rw-------. 1 u0_a396 u0_a396 2859 2026-05-17 11:35 gerenciador_z.py
+-rw-------. 1 u0_a396 u0_a396 2109 2026-05-17 11:23 sistema.py
+drwx------. 8 u0_a396 u0_a396 3452 2026-05-17 10:08 apps
+-rw-------. 1 u0_a396 u0_a396 1508 2026-05-16 21:13 teste_estresse_z.py
+-rw-------. 1 u0_a396 u0_a396 1844 2026-05-16 20:30 teste_crescimento_z.py
+-rw-------. 1 u0_a396 u0_a396  513 2026-05-16 20:28 README.md
+-rwx------. 1 u0_a396 u0_a396 1631 2026-05-16 19:08 push_quantum.sh
+-rw-------. 1 u0_a396 u0_a396 2143 2026-05-16 19:05 help.md
