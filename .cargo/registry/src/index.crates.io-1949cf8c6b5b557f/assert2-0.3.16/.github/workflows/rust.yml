@@ -1,0 +1,24 @@
+name: CI
+on:
+  push: { branches: "main" }
+  pull_request: { branches: "*" }
+
+jobs:
+  build_and_test:
+    name:  ${{ matrix.os }}, rust-${{ matrix.rust }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        rust: [stable, nightly, 1.70.0]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Install Rust ${{ matrix.rust }}
+        run: |
+          rustup install ${{ matrix.rust }} --profile minimal
+          rustup default ${{ matrix.rust }}
+      - name: Build
+        run: cargo build --release --all-features --color=always
+      - name: Test
+        run: cargo test --release --all-features --color=always

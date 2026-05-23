@@ -1,0 +1,130 @@
+[package]
+name = "qcs-api-client-common"
+version = "0.17.0"
+edition = "2021"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/rigetti/qcs-api-client-rust"
+homepage = "https://github.com/rigetti/qcs-api-client-rust"
+categories = ["api-bindings", "authentication"]
+keywords = ["qcs", "quantum", "rigetti", "api"]
+description = "Common code for QCS API clients"
+publish = ["crates-io"]
+
+[package.metadata.docs.rs]
+features = ["python", "tracing"]
+
+[lib]
+name = "qcs_api_client_common"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+clap = ["dep:clap-stdin", "dep:miette", "dep:serde_path_to_error"]
+tracing = ["dep:tracing", "urlpattern"]
+tracing-config = ["tracing"]
+python = [
+    "dep:paste",
+    "dep:pyo3",
+    "dep:pyo3-async-runtimes",
+    "dep:pyo3-build-config",
+    "dep:rigetti-pyo3",
+    "tokio/macros",
+]
+# Enable helper features for testing - do not use in production code.
+test = ["_insecure-issuer-validation"]
+_insecure-issuer-validation = []
+stubs = ["python", "dep:pyo3-stub-gen", "rigetti-pyo3/stubs"]
+
+[dependencies]
+async-tempfile = { workspace = true }
+async-trait = { workspace = true }
+backoff = { workspace = true }
+clap-stdin = { workspace = true, optional = true }
+derive_builder = { workspace = true }
+figment = { workspace = true }
+futures = { workspace = true }
+home = { workspace = true }
+http = { workspace = true }
+http-body-util = { workspace = true }
+hyper = { workspace = true, features = ["server"] }
+hyper-util = { workspace = true }
+jsonwebtoken = { workspace = true }
+miette = { workspace = true, optional = true }
+oauth2 = { workspace = true }
+optipy = { workspace = true }
+paste = { workspace = true, optional = true }
+pyo3 = { workspace = true, features = ["multiple-pymethods"], optional = true }
+pyo3-async-runtimes = { workspace = true, features = ["tokio-runtime"], optional = true }
+pyo3-stub-gen = { workspace = true, optional = true }
+reqwest = { workspace = true, default-features = false, features = ["socks", "rustls-tls-native-roots"] }
+rigetti-pyo3 = { workspace = true, features = ["async-tokio"], optional = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+serde_path_to_error = { workspace = true, optional = true }
+shellexpand = { workspace = true }
+thiserror = { workspace = true }
+time = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "sync", "fs", "signal"] }
+tokio-util = { workspace = true }
+toml = { workspace = true }
+toml_edit = { workspace = true }
+tracing = { workspace = true, optional = true }
+url = { workspace = true }
+urlpattern = { workspace = true, optional = true }
+webbrowser = { workspace = true }
+
+[build-dependencies]
+pyo3-build-config = { workspace = true, optional = true }
+
+[dev-dependencies]
+figment = { workspace = true, features = ["test"] }
+httpmock = { workspace = true }
+oauth2-test-server = { workspace = true }
+rstest = { workspace = true }
+serial_test = { workspace = true }
+tokio = { workspace = true, features = ["fs", "macros"] }
+
+[lints.clippy]
+# Covers correctness, suspicious, style, complexity, and perf
+all = "deny"
+# negative 'priority' makes overriding specific lints easier
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -2 }
+module_name_repetitions = "allow"    # This lint just seems silly
+redundant_pub_crate = "allow"        # Has false positives that conflict with unreachable_pub
+unsafe_derive_deserialize = "allow"  # Deriving `Deserialize` on a `pyclass` triggers this lint, but is not an issue.
+
+[lints.rust]
+# Extra non-clippy lints
+absolute_paths_not_starting_with_crate = "warn"
+anonymous_parameters = "warn"
+bad_style = "warn"
+dead_code = "warn"
+keyword_idents = "warn"
+improper_ctypes = "warn"
+macro_use_extern_crate = "warn"
+meta_variable_misuse = "warn"
+missing_abi = "warn"
+missing_debug_implementations = "warn"
+missing_docs = "warn"
+no_mangle_generic_items = "warn"
+non_shorthand_field_patterns = "warn"
+noop_method_call = "warn"
+overflowing_literals = "warn"
+path_statements = "warn"
+patterns_in_fns_without_body = "warn"
+semicolon_in_expressions_from_macros = "warn"
+trivial_casts = "warn"
+trivial_numeric_casts = "warn"
+unconditional_recursion = "warn"
+unreachable_pub = "warn"
+unsafe_code = "warn"
+unused = "warn"
+unused_allocation = "warn"
+unused_comparisons = "warn"
+unused_extern_crates = "warn"
+unused_import_braces = "warn"
+unused_lifetimes = "warn"
+unused_parens = "warn"
+unused_qualifications = "warn"
+while_true = "warn"

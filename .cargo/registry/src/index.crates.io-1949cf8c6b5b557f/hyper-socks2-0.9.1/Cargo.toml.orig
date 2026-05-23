@@ -1,0 +1,44 @@
+[package]
+name = "hyper-socks2"
+version = "0.9.1"
+authors = ["Arsenii Lyashenko <arsenylyashenko.3@gmail.com>"]
+license = "Apache-2.0 OR MIT"
+description = "A SOCKS5 connector for hyper library"
+repository = "https://github.com/ark0f/hyper-socks2"
+documentation = "https://docs.rs/hyper-socks2"
+readme = "README.md"
+keywords = ["hyper", "network", "ssl", "tls"]
+categories = ["authentication", "network-programming", "web-programming::http-client"]
+include = ["Cargo.toml", "LICENSE-*.md", "src/**/*"]
+edition = "2021"
+
+[badges]
+github-actions = { repository = "https://github.com/ark0f/hyper-socks2", workflow = "CI" }
+
+[dependencies]
+hyper = "1"
+async-socks5 = "0.6"
+tokio = "1.0"
+thiserror = "1.0"
+http = "1"
+tower-service = "0.3"
+hyper-util = { version = "0.1", features = ["tokio"] }
+
+# `tls` feature
+hyper-tls = { version = "0.6", optional = true }
+
+# `rustls` feature
+hyper-rustls = { version = "0.26", optional = true }
+rusttls = { package = "rustls", version = "0.22", optional = true }
+rustls-native-certs = { version = "0.7", optional = true }
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["macros"] }
+hyper-util = { version = "0.1", features = ["http1", "client", "client-legacy"] }
+http-body-util = "0.1"
+bytes = "1"
+
+[features]
+default = ["tls"]
+tls = ["hyper-tls"]
+rustls = ["hyper-rustls", "rusttls", "rustls-native-certs"]

@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: zblock-core
+Version: 2.0.0
+Summary: A secure geometric syntax interpreter handling hybrid file-folder contexts.
+Home-page: https://github.com/vertudee/apps
+Author: vertudee
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Z-Block Core
+Advanced geometric syntax interpreter with active ambiguity and background purity checking.
+Developed by @vertudee.

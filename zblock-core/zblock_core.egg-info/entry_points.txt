@@ -1,0 +1,2 @@
+[console_scripts]
+z-core = zblock_core.interpreter:list_z_nodes

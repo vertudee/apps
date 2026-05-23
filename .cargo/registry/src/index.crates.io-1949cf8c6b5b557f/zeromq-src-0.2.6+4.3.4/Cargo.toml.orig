@@ -1,0 +1,22 @@
+[package]
+name = "zeromq-src"
+version = "0.2.6+4.3.4"
+authors = ["jean-airoldie <maxence.caron@protonmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = """
+Source code and logic to build ZeroMQ from source
+"""
+repository = "https://github.com/jean-airoldie/zeromq-src-rs"
+readme = "README.md"
+keywords = ["libzmq", "zmq", "zeromq"]
+
+[workspace]
+members = ["testcrate"]
+
+[dependencies]
+cc = { version = "1", features = ["parallel"] }
+dircpy = "0.3.8"
+
+[dev-dependencies]
+testcrate = { path = "./testcrate", features = ["libsodium"] }

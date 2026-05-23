@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+zblock_core/__init__.py
+zblock_core/interpreter.py
+zblock_core/interpreter2.py
+zblock_core/interpreter3.py
+zblock_core.egg-info/PKG-INFO
+zblock_core.egg-info/SOURCES.txt
+zblock_core.egg-info/dependency_links.txt
+zblock_core.egg-info/entry_points.txt
+zblock_core.egg-info/top_level.txt

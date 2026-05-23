@@ -1,0 +1,79 @@
+[package]
+name = "qcs-api-client-grpc"
+version = "0.17.0"
+edition = "2021"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/rigetti/qcs-api-client-rust"
+homepage = "https://github.com/rigetti/qcs-api-client-rust"
+categories = ["api-bindings", "authentication"]
+keywords = ["qcs", "quantum", "rigetti", "api"]
+description = "gRPC client for the QCS API"
+publish = ["crates-io"]
+
+[features]
+server = []
+regen = []
+# Can be used to provide HTTP/1.1 support.
+grpc-web = ["dep:tonic-web"]
+tracing-opentelemetry = [
+    "dep:opentelemetry",
+    "dep:opentelemetry-http",
+    "qcs-api-client-common/tracing-config",
+    "tracing-config",
+    "tracing",
+]
+tracing = [
+    "dep:tracing",
+    "qcs-api-client-common/tracing-config",
+    "urlpattern",
+]
+tracing-config = ["qcs-api-client-common/tracing-config", "tracing"]
+
+[dependencies]
+backoff = { workspace = true, features = ["tokio"] }
+futures-util = { workspace = true }
+http = { workspace = true }
+http-body = { workspace = true }
+http-body-util = { workspace = true }
+hyper = { workspace = true }
+hyper-proxy2 = { workspace = true, default-features = false, features = ["rustls"] }
+hyper-socks2 = { workspace = true, default-features = false }
+hyper-util = { workspace = true, features = ["client-legacy"] }
+opentelemetry = { workspace = true, optional = true }
+opentelemetry-http = { workspace = true, optional = true }
+opentelemetry_sdk = { workspace = true }
+pbjson = { workspace = true }
+pbjson-types = { workspace = true }
+prost = { workspace = true }
+qcs-api-client-common = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["time"] }
+tonic = { workspace = true }
+tonic-web = { workspace = true, optional = true }
+tower = { workspace = true, features = ["retry"] }
+tower-http = { workspace = true, features = ["trace"] }
+tracing = { workspace = true, optional = true }
+tracing-opentelemetry = { workspace = true }
+url = { workspace = true }
+urlpattern = { workspace = true, optional = true }
+uuid = { workspace = true, features = ["v4"] }
+
+[build-dependencies]
+pbjson-build = { workspace = true }
+prost-build = { workspace = true }
+tonic-build = { workspace = true }
+
+[dev-dependencies]
+async-std = { workspace = true, features = ["attributes"] }
+jsonwebtoken = { workspace = true }
+once_cell = { workspace = true }
+opentelemetry = { workspace = true, features = ["trace"] }
+rstest = { workspace = true }
+serde_json = { workspace = true }
+tempfile = { workspace = true }
+tokio = { workspace = true, features = ["parking_lot", "rt-multi-thread"] }
+tokio-stream = { workspace = true, features = ["net"] }
+tonic-health = { workspace = true }
+tracing-subscriber = { workspace = true }

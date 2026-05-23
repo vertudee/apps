@@ -1,0 +1,41 @@
+[package]
+name = "pyo3-stub-gen"
+readme = "README.md"
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+chrono.workspace = true
+indexmap.workspace = true
+inventory.workspace = true
+itertools.workspace = true
+log.workspace = true
+maplit.workspace = true
+num-complex.workspace = true
+numpy = { workspace = true, optional = true }
+either = { workspace = true, optional = true }
+ordered-float = { workspace = true, optional = true }
+pyo3.workspace = true
+rust_decimal = { workspace = true, optional = true }
+serde.workspace = true
+toml.workspace = true
+
+[dependencies.pyo3-stub-gen-derive]
+version = "0.17.2"
+path = "../pyo3-stub-gen-derive"
+
+[dev-dependencies]
+test-case.workspace = true
+
+[features]
+default = ["numpy", "either", "infer_signature", "ordered-float"]
+numpy = ["dep:numpy"]
+either = ["dep:either"]
+infer_signature = []
+ordered-float = ["dep:ordered-float"]
+rust_decimal = ["dep:rust_decimal"]

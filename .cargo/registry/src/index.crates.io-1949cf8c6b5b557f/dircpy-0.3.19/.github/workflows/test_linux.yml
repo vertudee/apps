@@ -1,0 +1,14 @@
+on: [push]
+
+name: Test Linux
+
+jobs:
+  check:
+    name: Test ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run cargo check
+        uses: actions-rs/cargo@v1
+        with:
+          command: check

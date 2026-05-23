@@ -1,31 +1,47 @@
-# 🧊 Z-Block Architecture | Help & Documentation
 
-Welcome to the **Z-777** universal logic system. This document explains the core mechanics of the Z-Block architecture and how to interact with the engine.
+# ========================================================
+# QUANTUM-Z AUTOMATION SCRIPT - LIVE FLOW
+# ========================================================
 
-## 🌀 Core Mechanics: The Mirror Logic
-The Z-Block system does not use standard linear execution. It operates on **Symmetry**.
+echo "=== [ZARANYX_OS] INICIANDO SINCRO QUANTUM-Z ==="
 
-### 1. Opening the Block
-Every process starts with an **Identity**. 
-*Example:* `print`
-The system creates a memory mapping for this specific identity.
+# 1. GERANDO A DOCUMENTAÇÃO README.MD AUTOMATICAMENTE
+echo "-> Atualizando documentação em inglês (README.md)..."
+cat << 'EOF' > README.md
+# Quantum-Z Architecture (v4.0)
+> A Python-based framework simulating quantum operations, state stabilization, and phase-collision logic using Google's Cirq.
 
-### 2. The Vacuum (Process)
-Everything between two identical identities is considered the **Logical Vacuum**. This is where data is processed or displayed.
+This repository hosts the core modules of the **Quantum-Z Architecture**, a conceptual framework designed to test deterministic state outcomes, phase inversions, and interference patterns within simulated quantum circuits.
 
-### 3. Closing & Symmetry
-The block **MUST** be closed with the exact same identity to confirm the symmetry.
-* `[print] -> Content -> [print]` = **Symmetry Confirmed (Success)**
-* `[print] -> Content -> [if]` = **Logic Breakdown (Error)**
+---
 
-## 🛠️ System Commands & Files
-* `z_engine.c`: Run this to start the core processing unit.
-* `z-block.c`: Contains the definitions for identity detection.
-* `##`: Use this for absolute silence (0-byte comments).
+## 🌌 Core Concepts Developed
 
-## 🚀 Terminal Execution
-To compile and run the engine in your local environment:
+### 1. Active Noise Mitigation & Phase Inversion
+Testing how active reverse operations can mitigate simulated environmental noise (such as `BitFlip` and `PhaseFlip` channels) to preserve state coherence over multiple repetitions.
+
+### 2. Entanglement in Bell States
+Simulating coupled qubits where states remain interlinked. Testing how specific operations impact entangled pairs under noise-induced stress.
+
+### 3. Phase Collision & Amplitudes
+Utilizing positive and negative amplitudes (via the Pauli-Z gate) to induce constructive and destructive interference, forcing deterministic collapses under specific matrix conditions.
+
+---
+
+## 📂 File Architecture
+
+* `teste_matriz_quanti_z.py` (v1.0/v2.0): Baseline matrix execution and noise isolation filters.
+* `teste_quantum_z_entrelaçado.py` (v2.5): Evaluation of noise impacts on an entangled Bell State.
+* `teste_quantum_z_negativo.py` (v3.0): Demonstration of destructive interference using negative phases.
+* `quantum_z_absoluto.py` (v4.0): Master module evaluating 3 specific phase variations (`LIDER_NEGATIVO`, `GÊMEO_NEGATIVO`, `AMBOS_NEGATIVOS`) showing deterministic distribution outcomes.
+
+---
+
+## 🛠️ How to Run the Environment
+
+### Prerequisites
+Make sure you have Python 3 and the `cirq` framework installed in your environment (e.g., Termux or Linux console):
+
 ```bash
-clang z_engine.c z-block.c -o z_engine
-./z_engine
+pip install cirq
 
